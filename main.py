@@ -20,14 +20,16 @@ def krijg_verjaardag_vandaag():
         voornaam, huwgeboortedatum, geboortedatum = row
 
         if geboortedatum and geboortedatum.month == today.month and geboortedatum.day == today.day:
-            return voornaam
+            leeftijd = today.year - geboortedatum.year
+            return voornaam, leeftijd
 
 
 def krijg_huwelijk_vandaag():
     for row in rows:
         voornaam, huwelijksdatum, geboortedatum = row
         if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
-            return voornaam
+            aantal = today.year - huwelijksdatum.year
+            return voornaam, aantal
 
 
 cur.close()

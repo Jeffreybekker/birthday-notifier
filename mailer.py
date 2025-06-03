@@ -11,14 +11,17 @@ def send_email_jarige():
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
 
-    voornaam = krijg_verjaardag_vandaag()
+    result = krijg_verjaardag_vandaag()
 
-    if not voornaam:
+    if not result:
         print("Niemand jarig vandaag. Geen e-mail verzonden.")
         return
 
+    voornaam, leeftijd = result
+
     msg = MIMEText(f'Het is de verjaardag van {voornaam},'
-                   ' stuur hem of haar vandaag nog een berichtje!')
+                   ' en is {leeftijd} oud geworden! '
+                   'Stuur hem of haar vandaag nog een berichtje!')
     msg['Subject'] = f'{voornaam} is jarig vandaag!'
     msg['From'] = my_email
     msg['To'] = my_email
@@ -42,15 +45,18 @@ def send_email_huwelijk():
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
 
-    voornaam = krijg_huwelijk_vandaag()
+    result = krijg_huwelijk_vandaag()
 
-    if not voornaam:
-        print("Geen huwelijken vandaag. Geen e-mail verzonden.")
+    if not result:
+        print("Geen trouwdagen vandaag. Geen e-mail verzonden.")
         return
 
-    msg = MIMEText(f'Het is de verjaardag van {voornaam},'
-                   ' stuur hem of haar vandaag nog een berichtje!')
-    msg['Subject'] = f'{voornaam} is jarig vandaag!'
+    voornaam, aantal = result
+
+    msg = MIMEText(f'Het is de trouwdag van {voornaam},'
+                   ' en hij of zij is al {aantal} jaar getrouwd!'
+                   'Stuur hem of haar vandaag nog een berichtje!')
+    msg['Subject'] = f'Het is {voornaam} trouwdag!!'
     msg['From'] = my_email
     msg['To'] = my_email
 
