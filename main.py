@@ -17,13 +17,17 @@ today = datetime.today().date()
 
 def krijg_verjaardag_vandaag():
     for row in rows:
-        voornaam, huwelijksdatum, geboortedatum = row
+        voornaam, geboortedatum = row
 
         if geboortedatum and geboortedatum.month == today.month and geboortedatum.day == today.day:
             return voornaam
 
-# if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
-#     naam = voornaam
+
+def krijg_huwelijk_vandaag():
+    for row in rows:
+        voornaam, huwelijksdatum = row
+        if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
+            naam = voornaam
 
 
 cur.close()
