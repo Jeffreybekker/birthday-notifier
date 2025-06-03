@@ -12,6 +12,11 @@ def send_email():
     smtp_port = 587
 
     voornaam = krijg_verjaardag_vandaag()
+
+    if not voornaam:
+        print("Niemand jarig vandaag. Geen e-mail verzonden.")
+        return
+
     msg = MIMEText(f'Het is de verjaardag van {voornaam},'
                    ' stuur hem of haar vandaag nog een berichtje!')
     msg['Subject'] = f'{voornaam} is jarig vandaag!'
