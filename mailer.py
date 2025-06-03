@@ -3,8 +3,6 @@ import os
 from email.mime.text import MIMEText
 
 
-
-
 def send_email():
     my_email = os.getenv("MY_EMAIL")
     my_password = os.getenv("MY_PASSWORD")
