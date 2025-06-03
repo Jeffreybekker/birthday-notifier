@@ -24,7 +24,7 @@ def krijg_verjaardag_vandaag():
 
 # if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
 #     naam = voornaam
-
+krijg_verjaardag_vandaag()
 
 cur.close()
 conn.close()
