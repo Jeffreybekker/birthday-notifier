@@ -11,9 +11,9 @@ def send_email():
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
 
-    msg = MIMEText(f'Het is de verjaardag van {krijg_verjaardag_vandaag.naam},'
+    msg = MIMEText(f'Het is de verjaardag van {krijg_verjaardag_vandaag.voornaam},'
                    ' stuur hem of haar vandaag nog een berichtje!')
-    msg['Subject'] = f'{krijg_verjaardag_vandaag.naam} is jarig vandaag!'
+    msg['Subject'] = f'{krijg_verjaardag_vandaag.voornaam} is jarig vandaag!'
     msg['From'] = my_email
     msg['To'] = my_email
 
