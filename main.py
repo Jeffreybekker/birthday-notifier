@@ -1,6 +1,7 @@
 import psycopg2
 import os
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 
 conn = psycopg2.connect(os.getenv("SUPABASE_CONNECTION"))
@@ -12,7 +13,7 @@ cur.execute(
     )
 rows = cur.fetchall()
 
-today = datetime.today().date()
+today = datetime.now(ZoneInfo("Europe/Amsterdam")).date()
 
 
 def krijg_verjaardag_vandaag():
