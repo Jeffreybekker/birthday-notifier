@@ -7,7 +7,7 @@ load_dotenv()
 
 conn = psycopg2.connect(os.getenv("SUPABASE_CONNECTION"))
 
-cur = conn.cursor()
+cur = conn.cursor() 
 # Haalt data op van Supabase met een SQL command.
 cur.execute(
     "SELECT voornaam, huwelijksdatum, geboortedatum FROM familiegegevens;"
