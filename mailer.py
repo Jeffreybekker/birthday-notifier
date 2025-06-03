@@ -42,9 +42,6 @@ def send_email_jarige():
     print("E-mail is verzonden!")
 
 
-send_email_jarige()
-
-
 def send_email_huwelijk():
     my_email = os.getenv("MY_EMAIL")
     my_password = os.getenv("MY_PASSWORD")
@@ -83,4 +80,5 @@ def send_email_huwelijk():
     print("E-mail is verzonden!")
 
 
+send_email_jarige()
 send_email_huwelijk()
