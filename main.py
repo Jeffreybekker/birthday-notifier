@@ -17,7 +17,7 @@ today = datetime.today().date()
 
 def krijg_verjaardag_vandaag():
     for row in rows:
-        voornaam, geboortedatum = row
+        voornaam, huwgeboortedatum, geboortedatum = row
 
         if geboortedatum and geboortedatum.month == today.month and geboortedatum.day == today.day:
             return voornaam
@@ -25,7 +25,7 @@ def krijg_verjaardag_vandaag():
 
 def krijg_huwelijk_vandaag():
     for row in rows:
-        voornaam, huwelijksdatum = row
+        voornaam, huwelijksdatum, geboortedatum = row
         if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
             return voornaam
 
