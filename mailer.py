@@ -1,7 +1,7 @@
 import smtplib
 import os
 from email.mime.text import MIMEText
-from main import *
+from main import krijg_verjaardag_vandaag
 
 
 def send_email():
@@ -11,9 +11,9 @@ def send_email():
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
 
-    msg = MIMEText(f'Het is de verjaardag van {naam},'
+    msg = MIMEText(f'Het is de verjaardag van {krijg_verjaardag_vandaag.naam},'
                    ' stuur hem of haar vandaag nog een berichtje!')
-    msg['Subject'] = f'{naam} is jarig vandaag!'
+    msg['Subject'] = f'{krijg_verjaardag_vandaag.naam} is jarig vandaag!'
     msg['From'] = my_email
     msg['To'] = my_email
 

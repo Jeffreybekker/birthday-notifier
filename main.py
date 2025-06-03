@@ -14,14 +14,17 @@ rows = cur.fetchall()
 
 today = datetime.today().date()
 
-for row in rows:
-    voornaam, huwelijksdatum, geboortedatum = row
 
-    if geboortedatum and geboortedatum.month == today.month and geboortedatum.day == today.day:
-        naam = voornaam
+def krijg_verjaardag_vandaag():
+    for row in rows:
+        voornaam, huwelijksdatum, geboortedatum = row
 
-    if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
-        naam = voornaam
+        if geboortedatum and geboortedatum.month == today.month and geboortedatum.day == today.day:
+            return voornaam
+
+# if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
+#     naam = voornaam
+
 
 cur.close()
 conn.close()
