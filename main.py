@@ -26,8 +26,5 @@ def krijg_verjaardag_vandaag():
 #     naam = voornaam
 
 
-krijg_verjaardag_vandaag()
-
-
 cur.close()
 conn.close()
