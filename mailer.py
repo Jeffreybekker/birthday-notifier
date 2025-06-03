@@ -58,11 +58,18 @@ def send_email_huwelijk():
         print("Geen trouwdagen vandaag. Geen e-mail verzonden.")
         return
 
-    voornaam, aantal = result
+    voornaam, aantal, geslacht = result
+
+    if geslacht == "Man":
+        man_of_vrouw = "hij"
+        hem_of_haar = "hem"
+    elif geslacht == "Vrouw":
+        man_of_vrouw = "ze"
+        hem_of_haar = "haar"
 
     msg = MIMEText(f'Het is de trouwdag van {voornaam}'
-                   f' en hij of zij is al {aantal} jaar getrouwd! '
-                   'Stuur hem of haar vandaag nog een berichtje!')
+                   f' en {man_of_vrouw} is al {aantal} jaar getrouwd! '
+                   f'Stuur {hem_of_haar} vandaag nog een berichtje!')
     msg['Subject'] = f'Het is {voornaam} trouwdag!!'
     msg['From'] = my_email
     msg['To'] = my_email

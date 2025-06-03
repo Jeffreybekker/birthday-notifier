@@ -30,7 +30,7 @@ def krijg_huwelijk_vandaag():
         voornaam, huwelijksdatum, geboortedatum, geslacht = row
         if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
             aantal = today.year - huwelijksdatum.year
-            return voornaam, aantal
+            return voornaam, aantal, geslacht
 
 
 cur.close()
