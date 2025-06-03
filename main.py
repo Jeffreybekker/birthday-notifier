@@ -1,10 +1,7 @@
 import psycopg2
 import os
-from dotenv import load_dotenv
 from datetime import datetime
 
-
-load_dotenv()
 
 conn = psycopg2.connect(os.getenv("SUPABASE_CONNECTION"))
 

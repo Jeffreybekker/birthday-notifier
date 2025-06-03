@@ -28,3 +28,4 @@ jobs:
         env:
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          SUPABASE_CONNECTION: ${{ secrets.SUPABASE_CONNECTION }}
