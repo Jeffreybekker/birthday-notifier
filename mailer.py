@@ -1,7 +1,7 @@
 import smtplib
 import os
 from email.mime.text import MIMEText
-from main import *
+from main import krijg_huwelijk_vandaag, krijg_verjaardag_vandaag
 
 
 def send_email_jarige():

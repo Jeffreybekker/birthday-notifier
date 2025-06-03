@@ -27,7 +27,7 @@ def krijg_huwelijk_vandaag():
     for row in rows:
         voornaam, huwelijksdatum = row
         if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
-            naam = voornaam
+            return voornaam
 
 
 cur.close()
