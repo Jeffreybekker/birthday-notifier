@@ -26,7 +26,7 @@ def send_email_jarige():
         man_of_vrouw = "ze"
         hem_of_haar = "haar"
 
-    msg = MIMEText(f'Het is de verjaardag van {voornaam}'
+    msg = MIMEText(f"Het is {voornaam}'s verjaardag"
                    f' en {man_of_vrouw} is {leeftijd} jaar oud geworden! '
                    f'Stuur {hem_of_haar} vandaag nog een berichtje!')
     msg['Subject'] = f'{voornaam} is jarig vandaag!'
@@ -70,7 +70,7 @@ def send_email_huwelijk():
     msg = MIMEText(f'Het is de trouwdag van {voornaam}'
                    f' en {man_of_vrouw} is al {aantal} jaar getrouwd! '
                    f'Stuur {hem_of_haar} vandaag nog een berichtje!')
-    msg['Subject'] = f'Het is {voornaam} trouwdag!!'
+    msg['Subject'] = f"Het is {voornaam}'s trouwdag!!"
     msg['From'] = my_email
     msg['To'] = my_email
 
