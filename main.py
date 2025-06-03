@@ -1,6 +1,7 @@
 import psycopg2
 import os
 from dotenv import load_dotenv
+from datetime import datetime
 
 
 load_dotenv()
@@ -14,8 +15,16 @@ cur.execute(
     )
 rows = cur.fetchall()
 
+today = datetime.today().date()
+
 for row in rows:
-    print(row)
+    voornaam, huwelijksdatum, geboortedatum = row
+
+    if geboortedatum and geboortedatum.month == today.month and geboortedatum.day == today.day:
+        naam = voornaam
+
+    if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
+        naam = voornaam
 
 cur.close()
 conn.close()
