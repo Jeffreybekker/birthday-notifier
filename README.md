@@ -19,3 +19,8 @@ This Python project automatically sends a birthday and/or wedding e-mail every d
 - GitHub Actions for automation
 - Supabase (PostgreSQL)
 
+## Secrets configuration 🔐
+Set the following secrets in your GitHub repository under Setting -> Secrets and variables -> Actions:
+- `MY_EMAIL` - 
+- `MY_PASSWORD` - 
+- `SUPABASE_CONNECTION` - 
