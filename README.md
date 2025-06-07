@@ -21,6 +21,6 @@ This Python project automatically sends a birthday and/or wedding e-mail every d
 
 ## Secrets configuration 🔐
 Set the following secrets in your GitHub repository under Setting -> Secrets and variables -> Actions:
-- `MY_EMAIL` - 
-- `MY_PASSWORD` - 
-- `SUPABASE_CONNECTION` - 
+- `MY_EMAIL` - this is your own Gmail email.
+- `MY_PASSWORD` - create app password via https://myaccount.google.com/ ->  security -> search for app-passwords -> create password -> add password here
+- `SUPABASE_CONNECTION` - login to supabase -> connect -> copy session pooler -> create password -> add supabase connection here and your create supabase password
