@@ -33,7 +33,7 @@ def send_email_jarige():
     msg['From'] = my_email
     msg['To'] = my_email
 
-    with server = smtplib.SMTP(smtp_server, smtp_port) as server:
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
         server.starttls()
         server.login(my_email, my_password)
         server.send_message(msg)
