@@ -27,9 +27,11 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 git clone https://github.com/JeffreyBekker/birthday-notifier.git
 ```
 2. **Create a virtual environment**
-```python -m venv venv```
-3. **Start the virtual environment, depending on your system. You can get more information about this <a href="https://docs.python.org/3/tutorial/venv.html">here</a>.**
-4. **Install dependencies**
+```
+python -m venv venv
+```
+4. **Start the virtual environment, depending on your system. You can get more information about this <a href="https://docs.python.org/3/tutorial/venv.html">here</a>.** <br>
+5. **Install dependencies**
 ```
 pip install -r requirements.txt
 ```
