@@ -70,13 +70,11 @@ def send_email_huwelijk():
     msg['From'] = my_email
     msg['To'] = my_email
 
-    server = smtplib.SMTP(smtp_server, smtp_port)
-    server.starttls()
-    server.login(my_email, my_password)
-    server.send_message(msg)
-    server.quit()
-
-    print("E-mail is verzonden!")
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(my_email, my_password)
+        server.send_message(msg)
+        print("E-mail is verzonden!")
 
 
 send_email_jarige()
