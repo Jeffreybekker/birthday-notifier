@@ -12,7 +12,7 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - 🧹 Code style checking with `flake8`
 
 ## Example Email Output
-<img width="700" alt="image" src="https://github.com/user-attachments/assets/5c5ab8fa-67fa-4f49-8922-f25a0752fcea" />
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/5c5ab8fa-67fa-4f49-8922-f25a0752fcea" />
 
 
 ## Technology Used 
