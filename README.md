@@ -11,6 +11,9 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - 🔐 Uses GitHub Actions Secrets to keep credentials and database info secure
 - 🧹 Code style checking with `flake8`
 
+⚠️ **Note:** The project is written in **Dutch**, both in terms of **column names** (e.g., voornaam, geboortedatum, geslacht) and **variable names** in the code.
+If you prefer to use English, you'll need to update both the **database column names and the Python code** accordingly.
+
 ## ✉️ Example Email Output
 <img width="1200" alt="image" src="https://github.com/user-attachments/assets/5c5ab8fa-67fa-4f49-8922-f25a0752fcea" /> 
 
@@ -28,6 +31,7 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - **flake8** for code linting
 
 ## 🧾 Database Setup (Supabase Table)
+⚠️ **Note**: the project itself is written in Dutch terms. You can change it to English if you like, but you must change the column names aswel!
 Your Supabase PostgreSQL database must contain a single table with the following structure:
 
 ### 📊 Required Table: `familiegegevens`
