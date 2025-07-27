@@ -36,8 +36,6 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-
-
 ## Secrets Configuration
 Set the following secrets in your GitHub repository under Setting -> Secrets and variables -> Actions:
 - `MY_EMAIL` - this is your own Gmail email.
