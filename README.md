@@ -45,7 +45,7 @@ Before GitHub Actions can send emails and access the database, you must configur
 2. `MY_PASSWORD`
 *
 3. `SUPABASE_CONNECTION`
-*
+* Go to your [Supabase Project](https://app.supabase.com)
 
 Set the following secrets in your GitHub repository under Setting -> Secrets and variables -> Actions:
 - `MY_EMAIL` - this is your own Gmail email.
