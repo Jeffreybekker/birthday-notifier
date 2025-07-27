@@ -12,12 +12,13 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - 🧹 Code style checking with `flake8`
 
 ## Technology Used 
-- **Python 3.13**
-- **psycopg2** for PostgreSQL database acces
-- **smtplib** and **email** for sending emails
-- **python-dotenv** for local development
-- **GitHub Actions** for automation
-- **Supabase** (PostgreSQL)
+- Python 3.13
+- **psycopg2** for PostgreSQL acces
+- **smtplib** and **email** libraries for sending emails
+- **python-dotenv** and **.env** for local development
+- **GitHub Actions for daily scheduling
+- **Supabase** (PostgreSQL database)
+- **flake8** for code linting
 
 ## Secrets Configuration
 Set the following secrets in your GitHub repository under Setting -> Secrets and variables -> Actions:
