@@ -18,7 +18,7 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 **Title**: _It is Jeffreys birthday today!_ <br>
 **Message**: _It is Jeffreys birthday and he just turned 27! Send him a message today!_
 
-## Technology Used 
+## 🛠️ Technology Used 
 - Python 3.13
 - **psycopg2** for PostgreSQL access
 - **smtplib** and **email** libraries for sending emails
