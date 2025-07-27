@@ -131,3 +131,13 @@ For example:
 ```yaml
 schedule:
   - cron: "0 4 * * *"
+```
+
+## 🌍 Connect
+
+Have feedback or ideas?  
+Feel free to connect via GitHub or reach out directly.
+
+Built by [@JeffreyBekker](https://github.com/JeffreyBekker)  
+
+© 2025 Jeffrey Bekker
