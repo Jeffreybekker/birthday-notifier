@@ -18,8 +18,6 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 **Title**: _It is Jeffreys birthday today!_ <br>
 **Message**: _It is Jeffreys birthday and he just turned 27! Send him a message today!_
 
-
-
 ## Technology Used 
 - Python 3.13
 - **psycopg2** for PostgreSQL access
@@ -29,8 +27,43 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - **Supabase** (PostgreSQL database)
 - **flake8** for code linting
 
-## Installation
+## 🧾 Database Setup (Supabase Table)
+Your Supabase PostgreSQL database must contain a single table with the following structure:
 
+### 📊 Required Table: `familiegegevens`
+| Column Name    | Type      | Description                            |
+|----------------|-----------|----------------------------------------|
+| `voornaam`   | `text`    | Person's first name                    |
+| `achternaam`    | `text`    | Person's last name                     |
+| `geslacht`       | `text`    | Either `"man"` or `"vrouw"`         |
+| `geboortedatum `   | `date`    | Birthday in format `YYYY-MM-DD`       |
+| `huwelijksdatum ` | `date`    | Wedding date in format `YYYY-MM-DD` (can be `NULL`) |
+
+⚠️ Make sure that all dates use the `YYYY-MM-DD` format.
+
+### 🛠️ Create the Table (SQL)
+
+```
+CREATE TABLE familiegegevens (
+    voornaam VARCHAR(128) NOT NULL,
+    achternaam VARCHAR(128) NOT NULL,
+    geslacht VARCHAR(16) NOT NULL,
+    huwelijksdatum DATE,
+    geboortedatum DATE,
+);
+```
+
+### 🧪 Example rows
+```
+INSERT INTO people (voornaam, achternaam, geslacht, geboortedatum , huwelijksdatum )
+VALUES ('Jeffrey', 'Bekker', 'man', '1997-07-27', '2022-08-15');
+
+INSERT INTO people (voornaam, achternaam, geslacht, geboortedatum , huwelijksdatum )
+VALUES ('Anna', 'Jansen', 'vrouw', '1995-03-12', NULL);
+```
+
+
+## 🚀 Installation
 1. Clone the repository:
 ```
 git clone https://github.com/JeffreyBekker/birthday-notifier.git
@@ -69,7 +102,6 @@ To create it:
 **It should look like this:** <br>
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/5155bbe1-b403-443c-9ac7-e4f64e2f90c6" />
 
-
 ## Time Zone Info
 This project uses GitHub Actions to send emails automatically every day at 22:00 **UTC**
 That means:
@@ -96,4 +128,3 @@ For example:
 ```yaml
 schedule:
   - cron: "0 4 * * *"
-
