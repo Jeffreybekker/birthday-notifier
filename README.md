@@ -23,9 +23,9 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 ## Installation
 
 1. Clone the repository:
-```bash
+```
 git clone https://github.com/JeffreyBekker/birthday-notifier.git
-
+```
 2. Create a virtual environment:
 ```
 python -m venv venv
