@@ -7,7 +7,7 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - 🔎 Fetches birthday and wedding data from a Supabase PostgreSQL database
 - 📧 Sends personalized emails using Gmail
 - 🧠 Includes name, age calculation, and gender-based greetings
-- 🕛 Automatically runs daily at 00:00 via GitHub Actions [Time Zone Info](#time-zone-info)
+- 🕛 Automatically runs daily at 00:00 via GitHub Actions [Time Zone Info](#⏰-time-zone-info)
 - 🔐 Uses GitHub Actions Secrets to keep credentials and database info secure
 - 🧹 Code style checking with `flake8`
 
@@ -105,7 +105,7 @@ To create it:
 **It should look like this:** <br>
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/5155bbe1-b403-443c-9ac7-e4f64e2f90c6" />
 
-## Time Zone Info
+## ⏰ Time Zone Info
 This project uses GitHub Actions to send emails automatically every day at 22:00 **UTC**
 That means:
 * GitHub Actions uses **UTC** (Universal Time Coordinated) by default
