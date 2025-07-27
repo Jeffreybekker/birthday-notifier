@@ -1,17 +1,17 @@
-# Birthday and Wedding Email Notifier 🥳🎂👰🏻🤵🏻‍♂️
+# Birthday and Wedding Email Notifier 
 
-This Python project automatically sends a birthday and/or wedding e-mail every day at midnight, based on the data stored in a Supabase PostgreSQL database. It runs fully automated via GitHub Actions.
+This is a fully automated Python project that checks a Supabase PostgreSQL database daily and sends an email when someone has a birthday or a wedding day.
 
-## Features 🚀
+## Features 
 
-- Fetches birthday and weddingday data from a Supabase Database
-- Sends an email if someone has their birtday or wedding
-- Includes personalized name, gender-based salution and age
-- Automatically runs daily at 00:00 via GitHub Actions
-- Keeps email credentials and database secrets secure via GitHub Actions
+- ✅ Fetches birthday and wedding data from a Supabase PostgreSQL database
+- 📧 Sends personalized emails using Gmail
+- 🧠 Includes name, age calculation, and gender-based greetings
+- 🕛 Automatically runs daily at 00:00 via GitHub Actions [Time Zone Info](#time-zone-info)
+- 🔐 Uses GitHub Actions Secrets to keep credentials and database info secure
+- 🧹 Code style checking with `flake8`
 
-## Technology Used ⚙️🛠️
-
+## Technology Used 
 - Python 3.13
 - `psycopg2` for PostgreSQL database acces
 - `smtplib` and `email` for sending emails
@@ -19,8 +19,36 @@ This Python project automatically sends a birthday and/or wedding e-mail every d
 - GitHub Actions for automation
 - Supabase (PostgreSQL)
 
-## Secrets configuration 🔐
+## Secrets Configuration
 Set the following secrets in your GitHub repository under Setting -> Secrets and variables -> Actions:
 - `MY_EMAIL` - this is your own Gmail email.
 - `MY_PASSWORD` - create app password via [myaccount.google](https://myaccount.google.com/) ->  security -> search for app-passwords -> create password -> add password here
 - `SUPABASE_CONNECTION` - login to supabase -> connect -> copy session pooler -> create password -> add supabase connection here and your create supabase password
+
+## ⏰ Time Zone Info
+This project uses GitHub ACtions to send emails automatically every day at 22:00 UTC
+That means:
+* GitHub Actions uses UTC (Universal Time Coordinated) by default
+* The cron schedule in the email-schedule.yml file uses: 0 22 * * *, breakdown:
+  * 0 = minutes (xx:00)
+  * 22 = 22 hours (22:xx)
+  * The other bullets mean: day of the month, month, day of the week
+
+### 🌍 Adjusting to Your Local Time
+To run this script at your preferred **local time**, follow these steps:
+
+1. Decide the time you want the email to be sent (e.g. 00:00 local time).
+2. Convert your local time to **UTC** using tools like:
+   - [https://www.timeanddate.com/worldclock/converter.html](https://www.timeanddate.com/worldclock/converter.html)
+   - Google: “00:00 CEST to UTC”
+3. Update the cron in `.github/workflows/email-schedule.yml`
+
+For example:
+- You want **00:00 EDT** (Eastern Daylight Time, New York)
+- EDT = UTC-4 → 00:00 becomes **04:00 UTC**
+- Your cron becomes:
+
+```yaml
+schedule:
+  - cron: "0 4 * * *"
+
