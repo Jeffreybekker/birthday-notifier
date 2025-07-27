@@ -57,7 +57,7 @@ To create it:
 * Use the provided connection string and credentials
 * Add it to GitHub Secrets as SUPABASE_CONNECTION
 
-<img width="1232" height="840" alt="image" src="https://github.com/user-attachments/assets/5155bbe1-b403-443c-9ac7-e4f64e2f90c6" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/5155bbe1-b403-443c-9ac7-e4f64e2f90c6" />
 
 
 ## Time Zone Info
