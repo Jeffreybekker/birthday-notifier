@@ -44,7 +44,7 @@ Set the following secrets in your GitHub repository under Setting -> Secrets and
 - `MY_PASSWORD` - create app password via [myaccount.google](https://myaccount.google.com/) ->  security -> search for app-passwords -> create password -> add password here
 - `SUPABASE_CONNECTION` - login to supabase -> connect -> copy session pooler -> create password -> add supabase connection here and your create supabase password
 
-## ⏰ Time Zone Info
+## Time Zone Info
 This project uses GitHub ACtions to send emails automatically every day at 22:00 **UTC**
 That means:
 * GitHub Actions uses **UTC** (Universal Time Coordinated) by default
@@ -53,7 +53,7 @@ That means:
   * 22 = 22 hours (22:xx)
   * The other bullets mean: day of the month, month, day of the week
 
-### 🌍 Adjusting to Your Local Time
+### Adjusting to Your Local Time
 To run this script at your preferred **local time**, follow these steps:
 
 1. Decide the time you want the email to be sent (e.g. 00:00 local time).
