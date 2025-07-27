@@ -15,8 +15,8 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 <img width="1200" alt="image" src="https://github.com/user-attachments/assets/5c5ab8fa-67fa-4f49-8922-f25a0752fcea" /> 
 
 **Translated** <br>
-Title: It is Jeffreys birthday today! <br>
-Message: It is Jeffreys birthday and he just turned 27! Send him a message today!
+**Title**: _It is Jeffreys birthday today!_ <br>
+**Message**: _It is Jeffreys birthday and he just turned 27! Send him a message today!_
 
 
 
