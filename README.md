@@ -2,16 +2,16 @@
 
 This is a fully automated Python project that checks a Supabase PostgreSQL database daily and sends an email when someone has a birthday or a wedding day.
 
-## Features 
+## ✅ Features 
 
-- ✅ Fetches birthday and wedding data from a Supabase PostgreSQL database
+- 🔎 Fetches birthday and wedding data from a Supabase PostgreSQL database
 - 📧 Sends personalized emails using Gmail
 - 🧠 Includes name, age calculation, and gender-based greetings
 - 🕛 Automatically runs daily at 00:00 via GitHub Actions [Time Zone Info](#time-zone-info)
 - 🔐 Uses GitHub Actions Secrets to keep credentials and database info secure
 - 🧹 Code style checking with `flake8`
 
-## Example Email Output
+## ✉️ Example Email Output
 <img width="1200" alt="image" src="https://github.com/user-attachments/assets/5c5ab8fa-67fa-4f49-8922-f25a0752fcea" /> 
 
 **Translated** <br>
@@ -55,13 +55,12 @@ CREATE TABLE familiegegevens (
 
 ### 🧪 Example rows
 ```
-INSERT INTO people (voornaam, achternaam, geslacht, geboortedatum , huwelijksdatum )
+INSERT INTO familiegegevens (voornaam, achternaam, geslacht, geboortedatum , huwelijksdatum )
 VALUES ('Jeffrey', 'Bekker', 'man', '1997-07-27', '2022-08-15');
 
-INSERT INTO people (voornaam, achternaam, geslacht, geboortedatum , huwelijksdatum )
+INSERT INTO familiegegevens (voornaam, achternaam, geslacht, geboortedatum , huwelijksdatum )
 VALUES ('Anna', 'Jansen', 'vrouw', '1995-03-12', NULL);
 ```
-
 
 ## 🚀 Installation
 1. Clone the repository:
@@ -78,7 +77,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-## GitHub Secrets Configuration
+## 🔐 GitHub Secrets Configuration
 Before GitHub Actions can send emails and access the database, you must configure three secrets in your repository:
 You can add them here: https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME]/settings/secrets/actions
 
