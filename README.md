@@ -16,7 +16,7 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - **psycopg2** for PostgreSQL acces
 - **smtplib** and **email** libraries for sending emails
 - **python-dotenv** and **.env** for local development
-- **GitHub Actions for daily scheduling
+- GitHub Actions for daily scheduling
 - **Supabase** (PostgreSQL database)
 - **flake8** for code linting
 
