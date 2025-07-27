@@ -44,7 +44,7 @@ In this link: https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME]/sett
 * Your own Gmail address that will send the emails
 * Add it to GitHub Secrets under the name MY_EMAIL
 2. `MY_PASSWORD`
-This is a Gmail App Password (not your regular Gmail password)
+This is a Gmail App Password (not your regular Gmail password)<br>
 To create it:
 * Go to [myaccount.google.com](https://myaccount.google.com/)
 * Navigate to **Security** -> **App Passwords**
