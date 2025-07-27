@@ -26,9 +26,9 @@ Set the following secrets in your GitHub repository under Setting -> Secrets and
 - `SUPABASE_CONNECTION` - login to supabase -> connect -> copy session pooler -> create password -> add supabase connection here and your create supabase password
 
 ## ⏰ Time Zone Info
-This project uses GitHub ACtions to send emails automatically every day at 22:00 UTC
+This project uses GitHub ACtions to send emails automatically every day at 22:00 **UTC**
 That means:
-* GitHub Actions uses UTC (Universal Time Coordinated) by default
+* GitHub Actions uses **UTC** (Universal Time Coordinated) by default
 * The cron schedule in the email-schedule.yml file uses: 0 22 * * *, breakdown:
   * 0 = minutes (xx:00)
   * 22 = 22 hours (22:xx)
