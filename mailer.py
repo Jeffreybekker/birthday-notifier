@@ -33,12 +33,15 @@ def send_email_jarige():
     msg['From'] = my_email
     msg['To'] = my_email
 
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
-        server.starttls()
-        server.login(my_email, my_password)
-        server.send_message(msg)
+    try:
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(my_email, my_password)
+            server.send_message(msg)
+            print("E-mail is verzonden!")
 
-        print("E-mail is verzonden!")
+    except Exception as e:
+        print(f"Fout bij het verzenden van de e-mail: {e}")
 
 
 def send_email_huwelijk():
