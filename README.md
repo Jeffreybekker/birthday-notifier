@@ -11,6 +11,10 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - 🔐 Uses GitHub Actions Secrets to keep credentials and database info secure
 - 🧹 Code style checking with `flake8`
 
+## Example Email Output
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/5c5ab8fa-67fa-4f49-8922-f25a0752fcea" />
+
+
 ## Technology Used 
 - Python 3.13
 - **psycopg2** for PostgreSQL access
@@ -38,7 +42,7 @@ pip install -r requirements.txt
 
 ## GitHub Secrets Configuration
 Before GitHub Actions can send emails and access the database, you must configure three secrets in your repository:
-In this link: https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME]/settings/secrets/actions you can find where to create GitHub Secrets.
+You can add them here: https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME]/settings/secrets/actions
 
 1. `MY_EMAIL`
 * Your own Gmail address that will send the emails
@@ -65,7 +69,7 @@ To create it:
 This project uses GitHub Actions to send emails automatically every day at 22:00 **UTC**
 That means:
 * GitHub Actions uses **UTC** (Universal Time Coordinated) by default
-* The cron schedule in the email-schedule.yml file uses: 0 22 * * *, breakdown:
+* The cron schedule in the email-schedule.yml file uses: 0 22 * * *. Breakdown:
   * 0 = minutes (xx:00)
   * 22 = 22 hours (22:xx)
   * The other bullets mean: day of the month, month, day of the week
