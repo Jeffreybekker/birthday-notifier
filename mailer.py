@@ -38,7 +38,7 @@ def send_email_jarige():
         server.login(my_email, my_password)
         server.send_message(msg)
 
-    print("E-mail is verzonden!")
+        print("E-mail is verzonden!")
 
 
 def send_email_huwelijk():
