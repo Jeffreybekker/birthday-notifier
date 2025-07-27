@@ -38,21 +38,24 @@ pip install -r requirements.txt
 
 ## GitHub Secrets Configuration
 Before GitHub Actions can send emails and access the database, you must configure three secrets in your repository:
-In this link: https://github.com/[YOUR_GITHUB_NAME]/[YOUR_PROJECT_NAME]/settings/secrets/actions you can find where to create GitHub Secrets.
+In this link: https://github.com/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME]/settings/secrets/actions you can find where to create GitHub Secrets.
 
 1. `MY_EMAIL`
-* Enter your own Gmail address that will send the emails in GitHub Secrets
+* Your own Gmail address that will send the emails
+* Add it to GitHub Secrets under the name MY_EMAIL
 2. `MY_PASSWORD`
-* Create an App Password/Passkey for your Gmail account:
-  * Go to [myaccount.google.com](https://myaccount.google.com/)
-  * Navigate to **Security** -> **App Passwords**
-  * Create a new App Password (e.g. "Birthday Notifier") and copy the password
-  * Paste the password in GitHub Secrets
+This is a Gmail App Password (not your regular Gmail password)
+To create it:
+* Go to [myaccount.google.com](https://myaccount.google.com/)
+* Navigate to **Security** -> **App Passwords**
+* Create a new App Password (e.g. "Birthday Notifier")
+* Copy the generated Passkey
+* Add it to GitHub Secrets as MY_PASSWORD
 3. `SUPABASE_CONNECTION`
 * Go to your [Supabase Project](https://app.supabase.com)
 * Click **Connect**  -> **Session Pooler**
 * Use the provided connection string and credentials
-* Paste the connection string in GitHub Secrets
+* Add it to GitHub Secrets as SUPABASE_CONNECTION
 
 ## Time Zone Info
 This project uses GitHub Actions to send emails automatically every day at 22:00 **UTC**
