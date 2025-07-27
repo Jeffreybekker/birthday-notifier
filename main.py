@@ -41,7 +41,3 @@ def krijg_huwelijk_vandaag():
         if huwelijksdatum and huwelijksdatum.month == today.month and huwelijksdatum.day == today.day:
             aantal = today.year - huwelijksdatum.year
             return voornaam, aantal, geslacht
-
-
-cur.close()
-conn.close()
