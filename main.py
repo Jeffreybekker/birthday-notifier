@@ -3,15 +3,25 @@ import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+try:
+    conn = psycopg2.connect(os.getenv("SUPABASE_CONNECTION"))
 
-conn = psycopg2.connect(os.getenv("SUPABASE_CONNECTION"))
+    cur = conn.cursor()
+    # Haalt data op van Supabase met een SQL command.
+    cur.execute(
+        "SELECT voornaam, huwelijksdatum, geboortedatum, geslacht FROM familiegegevens;"
+        )
+    rows = cur.fetchall()
 
-cur = conn.cursor()
-# Haalt data op van Supabase met een SQL command.
-cur.execute(
-    "SELECT voornaam, huwelijksdatum, geboortedatum, geslacht FROM familiegegevens;"
-    )
-rows = cur.fetchall()
+except Exception as e:
+    print(f"Databaseverbinding of query mislukt: {e}")
+    exit()
+
+finally:
+    if 'cur' in locals():
+        cur.close()
+    if 'conn' in locals():
+        conn.close()
 
 today = datetime.now(ZoneInfo("Europe/Amsterdam")).date()
 
