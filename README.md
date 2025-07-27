@@ -20,6 +20,14 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - **Supabase** (PostgreSQL database)
 - **flake8** for code linting
 
+## Installation
+
+1. **Clone the repository**
+```git clone https://github.com/JeffreyBekker/birthday-notifier.git```
+2. **Create a virtual environment and install dependencies**
+```python -m venv venv```
+
+
 ## Secrets Configuration
 Set the following secrets in your GitHub repository under Setting -> Secrets and variables -> Actions:
 - `MY_EMAIL` - this is your own Gmail email.
