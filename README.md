@@ -13,7 +13,7 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 
 ## Technology Used 
 - Python 3.13
-- **psycopg2** for PostgreSQL acces
+- **psycopg2** for PostgreSQL access
 - **smtplib** and **email** libraries for sending emails
 - **python-dotenv** and **.env** for local development
 - GitHub Actions for daily scheduling
@@ -36,14 +36,24 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-## Secrets Configuration
+## GitHub Secrets Configuration
+Before GitHub Actions can send emails and access the database, you must configure three secrets in your repository:
+
+1. `MY_EMAIL`
+* Your Gmail address that will send the emails
+* 
+2. `MY_PASSWORD`
+*
+3. `SUPABASE_CONNECTION`
+*
+
 Set the following secrets in your GitHub repository under Setting -> Secrets and variables -> Actions:
 - `MY_EMAIL` - this is your own Gmail email.
 - `MY_PASSWORD` - create app password via [myaccount.google](https://myaccount.google.com/) ->  security -> search for app-passwords -> create password -> add password here
 - `SUPABASE_CONNECTION` - login to supabase -> connect -> copy session pooler -> create password -> add supabase connection here and your create supabase password
 
 ## Time Zone Info
-This project uses GitHub ACtions to send emails automatically every day at 22:00 **UTC**
+This project uses GitHub Actions to send emails automatically every day at 22:00 **UTC**
 That means:
 * GitHub Actions uses **UTC** (Universal Time Coordinated) by default
 * The cron schedule in the email-schedule.yml file uses: 0 22 * * *, breakdown:
