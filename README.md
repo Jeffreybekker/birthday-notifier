@@ -7,7 +7,7 @@ This is a fully automated Python project that checks a Supabase PostgreSQL datab
 - 🔎 Fetches birthday and wedding data from a Supabase PostgreSQL database
 - 📧 Sends personalized emails using Gmail
 - 🧠 Includes name, age calculation, and gender-based greetings
-- 🕛 Automatically runs daily at 00:00 via GitHub Actions [Time Zone Info](#time-zone-info)
+- 🕛 Automatically runs daily at 00:00 via GitHub Actions [Time Zone Info](#-time-zone-info)
 - 🔐 Uses GitHub Actions Secrets to keep credentials and database info secure
 - 🧹 Code style checking with `flake8`
 
